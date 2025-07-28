@@ -1,3 +1,50 @@
-body{
-background-color:rgb(113, 188, 255);
+/* Import the Press Start 2P font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Global styles */
+* {
+    font-family: 'Press Start 2P', cursive;
+    color: white; /* Make all text white by default */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+/* Hero section */
+.hero-image {
+    background-image: url("./my pictures/title.PNG");
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.hero-text {
+    color: whitesmoke;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 280px;
+    font-size: large;
+}
+
+/* Ruins image + heading */
+.center-ruins {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.image-heading {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
