@@ -25,26 +25,52 @@ body {
     position: relative;
 }
 
+/* Center the text inside the hero image */
 .hero-text {
     color: whitesmoke;
     position: absolute;
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Adjust for the text’s dimensions */
     text-align: center;
-    width: 100%;
-    top: 280px;
     font-size: large;
+    width: 100%; /* Optional: adjust text width to fit container */
+    margin-top: 8%;
 }
 
-/* Ruins image + heading */
+/* Ruins, Snowdin, Waterfall images - consistent sizing */
 .center-ruins {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    max-width: 300px;   /* limit width to 300px */
+    height: auto;       /* maintain aspect ratio */
 }
 
+/* Section image headings */
 .image-heading {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 10px;
     font-size: 1.5rem;
+}
+
+/* Two-column layout */
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.image, .info {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.info {
+    color: white;
+    line-height: 1.6;
 }
