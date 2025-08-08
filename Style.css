@@ -1,76 +1,103 @@
-/* Import the Press Start 2P font from Google Fonts */
+/* Import the 'Press Start 2P' font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Global styles */
+/* Global styles applied to all elements */
 * {
-    font-family: 'Press Start 2P', cursive;
-    color: white; /* Make all text white by default */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: 'Press Start 2P', cursive; /* Use the imported pixel-style font */
+    color: white; /* Default text color set to white */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Style for the entire page background */
 body {
-    background-color: black;
+    background-color: black; /* Set background to black for contrast */
 }
 
-/* Hero section */
+/* Hero section styles */
 .hero-image {
-    background-image: url("./my pictures/title.PNG");
-    height: 320px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    position: relative;
+    background-image: url("./my pictures/title.PNG"); /* Set background image for hero */
+    height: 320px; /* Fixed height for hero section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-size: cover; /* Scale image to cover entire hero area */
+    width: 100%; /* Full width of the container */
+    position: relative; /* Position relative for absolutely positioned child (.hero-text) */
 }
 
-/* Center the text inside the hero image */
+/* Text centered inside the hero image */
 .hero-text {
-    color: whitesmoke;
-    position: absolute;
-    top: 50%; /* Vertically center the text */
-    left: 50%; /* Horizontally center the text */
-    transform: translate(-50%, -50%); /* Adjust for the text’s dimensions */
-    text-align: center;
-    font-size: large;
-    width: 100%; /* Optional: adjust text width to fit container */
-    margin-top: 8%;
+    color: whitesmoke; /* Light gray text for readability */
+    position: absolute; /* Position relative to .hero-image */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Offset by half width/height to perfectly center */
+    text-align: center; /* Center-align text */
+    font-size: large; /* Set font size */
+    width: 100%; /* Full width for text container */
+    margin-top: 8%; /* Slight spacing from top */
 }
 
-/* Ruins, Snowdin, Waterfall images - consistent sizing */
-.center-ruins {
-    display: block;
-    margin-left: auto;
+/* Styling for Ruins images - centered and responsive */
+.center-ruins, .center-snowdin, .center-waterfall, .center-hotlands {
+    display: block; /* Make images block-level to respect margin auto */
+    margin-left: auto; /* Center horizontally */
     margin-right: auto;
-    margin-top: 20px;
-    max-width: 300px;   /* limit width to 300px */
-    height: auto;       /* maintain aspect ratio */
+    margin-top: 20px; /* Space above images */
+    height: auto; /* Maintain image aspect ratio */
 }
 
-/* Section image headings */
-.image-heading {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+/* Specific max widths for each ruins image */
+.center-ruins {
+    max-width: 600px; /* Limit width for ruins image */
 }
 
-/* Two-column layout */
-.two-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px 20px;
-    gap: 40px;
+.center-snowdin {
+    max-width: 500px; /* Slightly smaller max width for snowdin image */
 }
 
-.image, .info {
-    flex: 1 1 400px;
+.center-waterfall {
+    max-width: 600px; /* Limit width for waterfall image */
+}
+
+.center-hotland{  
+    max-width: 630px;
+}
+
+.center-judgment{
     max-width: 600px;
 }
+/* Headings above images */
+.image-heading {
+    text-align: center; /* Center-align heading text */
+    margin-top: 10px; /* Space above heading */
+    margin-bottom: 10px; /* Space below heading */
+    font-size: 1.5rem; /* Larger font size for headings */
+}
 
+/* Container for two-column layout */
+.two-column {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    justify-content: center; /* Center columns horizontally */
+    padding: 40px 20px; /* Vertical and horizontal padding */
+    gap: 40px; /* Space between columns */
+}
+
+/* Columns for image and text */
+.image, .info {
+    flex: 1 1 400px; /* Flexible basis with minimum width of 400px */
+    max-width: 600px; /* Limit max width for readability */
+}
+
+/* Styling for informational text */
 .info {
-    color: white;
-    line-height: 1.6;
+    color: white; /* White text */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+p{
+font-size: small;
+margin-top: 3%;
+
 }
