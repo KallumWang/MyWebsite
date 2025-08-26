@@ -109,3 +109,17 @@ p {
   font-size: small;
   margin-top: 7%;
 }
+
+.three-column{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 420px;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+
+.card.text{
+  text-align: center;
+}
