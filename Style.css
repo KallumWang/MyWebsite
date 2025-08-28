@@ -110,16 +110,21 @@ p {
   margin-top: 7%;
 }
 
-.three-column{
+.three-column {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 420px;
-  width: 80%;
-  margin: auto;
-  margin-top: 40px;
+  gap: 40px; /* ✅ much smaller gap */
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 50px auto;
+  align-items: center;
+  text-align: center;
 }
 
 
 .card.text{
   text-align: center;
+  margin: 0 auto;
+  color: whitesmoke;
 }
+
