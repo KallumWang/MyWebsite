@@ -113,7 +113,7 @@ p {
 .three-column {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /* ✅ much smaller gap */
+  gap: 40px; /*  much smaller gap */
   width: 90%;
   max-width: 1200px;
   margin: 40px auto 50px auto;
@@ -127,4 +127,3 @@ p {
   margin: 0 auto;
   color: whitesmoke;
 }
-
