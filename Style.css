@@ -12,6 +12,7 @@
 /* Page background */
 body {
   background-color: black;
+  padding-bottom: 80px; /* space so audio bar doesn’t overlap content */
 }
 
 /* Hero section styling */
@@ -37,7 +38,20 @@ body {
   margin-top: 8%;
 }
 
-/* Image headings centered with spacing */
+/* Audio player fixed at bottom */
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+  border-top: 2px solid white; /* undertale-ish touch */
+}
+
+/* Image headings */
 .image-heading {
   text-align: center;
   margin-top: 30px;
@@ -52,31 +66,17 @@ body {
 .center-hotland,
 .center-judgment {
   display: block;
-  margin: 20px auto;    /* Centers horizontally and adds vertical spacing */
+  margin: 20px auto;
   height: auto;
 }
 
-.center-ruins {
-  max-width: 600px;
-}
+.center-ruins { max-width: 600px; }
+.center-snowdin { max-width: 500px; }
+.center-waterfall { max-width: 600px; }
+.center-hotland { max-width: 630px; }
+.center-judgment { max-width: 600px; }
 
-.center-snowdin {
-  max-width: 500px;
-}
-
-.center-waterfall {
-  max-width: 600px;
-}
-
-.center-hotland {
-  max-width: 630px;
-}
-
-.center-judgment {
-  max-width: 600px;
-}
-
-/* Two-column layout with spacing */
+/* Two-column layout */
 .two-column {
   display: flex;
   flex-wrap: wrap;
@@ -85,44 +85,41 @@ body {
   gap: 40px;
 }
 
-/* Image and text column styling */
 .image,
 .info {
   flex: 1 1 400px;
   max-width: 600px;
 }
 
-/* Info text formatting */
 .info {
   line-height: 1.6;
-  margin-bottom: 40px;      /* Adds space at bottom of each section */
-  text-align: center;       /* Centers heading and paragraph text */
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .info h1,
 .info p {
-  text-align: center;       /* Ensure subheadings and paragraphs are centered */
+  text-align: center;
 }
 
-/* Paragraph styling */
 p {
   font-size: small;
   margin-top: 7%;
 }
 
+/* Three-column card section */
 .three-column {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /*  much smaller gap */
+  gap: 40px;
   width: 90%;
   max-width: 1200px;
-  margin: 40px auto 50px auto;
+  margin: 40px auto 100px auto; /* more space for audio */
   align-items: center;
   text-align: center;
 }
 
-
-.card.text{
+.card.text {
   text-align: center;
   margin: 0 auto;
   color: whitesmoke;
