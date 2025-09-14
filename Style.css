@@ -51,12 +51,14 @@ body {
   border-top: 2px solid white; /* undertale-ish touch */
 }
 
-/* Image headings */
-.image-heading {
-  text-align: center;
+/* Image headings and info headings aligned left */
+.image-heading,
+.info h1 {
+  text-align: left;
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.5rem;
+  padding-left: 10px;
 }
 
 /* Centering and spacing images */
@@ -76,13 +78,14 @@ body {
 .center-hotland { max-width: 630px; }
 .center-judgment { max-width: 600px; }
 
-/* Two-column layout */
+/* Two-column layout with vertical alignment */
 .two-column {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px 20px;
   gap: 40px;
+  align-items: flex-start; /* keeps headings aligned at the top */
 }
 
 .image,
@@ -94,12 +97,12 @@ body {
 .info {
   line-height: 1.6;
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left; /* changed from center to left for consistency */
 }
 
 .info h1,
 .info p {
-  text-align: center;
+  /* Removed center text-align here, handled above */
 }
 
 p {
